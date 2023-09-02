@@ -40,17 +40,31 @@ def func_Fairytale(request):
     }
 
     context['ask_str'] = make_question(context)
-    # context['answer_chatgpt'] = openapi_chatgpt(context['ask_str'])
     context['result_chatgpt'] = eval(openapi_chatgpt(context['ask_str']))
-    context['len_chap'] = len(context['result_chatgpt'])
 
-    context['result_title'] =context['result_chatgpt']['chapter1']['chapter_title']
-    context['result_content'] = make_story(context['result_chatgpt'], context['len_chap'])
+    context['detail_length'] = len(context['result_chatgpt'])
+    context['result_content'] = ""
+    context['result_background'] = ""
 
-    print(context['result_chatgpt'])
-    print(type(context['result_chatgpt']))
-    print(len(context['result_chatgpt']))
+    if "chapter_1" in context['result_chatgpt'] :
+        context['result_title'] = context['result_chatgpt']['chapter_1']['chapter_title']
+        for i in range(1, context['detail_length']):
+            type_name = f"chapter_{i}"
+            context['result_content'] += context['result_chatgpt'][type_name]['chapter_content']
+            context['result_background'] += context['result_chatgpt'][type_name]['chapter_background']
+            # print(context['result_chatgpt'][type_name]['chapter_background'])
+    else:
+        for i in range(1, context['detail_length']):
+            context['result_title'] = context['result_chatgpt']['chapter1']['chapter_title']
+            type_name = f"chapter{i}"
+            context['result_content'] += context['result_chatgpt'][type_name]['chapter_content']
+            context['result_background'] += context['result_chatgpt'][type_name]['chapter_background']
+            # print(context['result_chatgpt'][type_name]['chapter_background'])
 
+    context['result_image'] = openapi_dalle(context['result_background'],1,'1024x1024')
+
+    print(context['result_content'])
+    print(context['result_image'])
     return render(request, 'ProjectFinal/fairytale.html', context)
 
 
@@ -67,7 +81,7 @@ def openapi_chatgpt(question):
     )
     return completion['choices'][0]['message']['content']
 
-def openapi_delle(description, img_cnt , img_size):
+def openapi_dalle(description, img_cnt , img_size):
     response = openai.Image.create(
         prompt = description,
         n = img_cnt,
@@ -100,12 +114,13 @@ def make_question_kor(input_info):
 
     return result_str
 
-def make_story(fairytale_info, fairytale_len):
-    result_str = ""
-
-    for i in range(1, len(fairytale_len)):
-        chapter_type = f"chapter{i}"
-        result_str += f"{fairytale_info[chapter_type]['chapter_content']}"
-        result_str += "\n"
-
-    return result_str
+# def make_story(fairytale_info, fairytale_len):
+#     result_str = ""
+#
+#     for i in range(1, len(fairytale_len)):
+#         chapter_type = f"chapter_{i}"
+#         print(f"{i} >>>>>>>>>>> {fairytale_info[chapter_type]['chapter_content']}")
+#         result_str += f"{fairytale_info[chapter_type]['chapter_content']}"
+#         result_str += "\n"
+#
+#     return result_str
