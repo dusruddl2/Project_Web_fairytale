@@ -5,7 +5,7 @@ from django.shortcuts import render
 import json
 import openai
 
-openai.api_key = "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"
+openai.api_key = ""
 
 # Create your views here.
 

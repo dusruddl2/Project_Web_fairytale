@@ -252,28 +252,49 @@
       </div>
       <!-- header section end -->
 
-      <!-- about section start -->
-      <div class="about_section layout_padding">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="about_taital_main">
-                     <h1 class="about_taital">{{result_title}}</h1>
-                     <p class="about_text" style="font-size : 20px;padding : 0px 0px 10% 0px;">{{result_content}}</p>
-                      <button type="submit" class="su_btn" style="font-size:20px; padding : 5px 0px 0px 0px;" >동화 다시 만들기</button>
+<!--      &lt;!&ndash; about section start &ndash;&gt;-->
+<!--      <div class="about_section layout_padding">-->
+<!--         <div class="container-fluid">-->
+<!--            <div class="row">-->
+<!--               <div class="col-md-6">-->
+<!--                  <div class="about_taital_main">-->
+<!--                     <h1 class="about_taital">{{result_title}}</h1>-->
+<!--                     <p class="about_text" style="font-size : 20px;padding : 0px 0px 10% 0px;">{{result_content}}</p>-->
+<!--                      <button type="submit" class="su_btn" style="font-size:20px; padding : 5px 0px 0px 0px;" >동화 다시 만들기</button>-->
 
-                  </div>
-               </div>
-               <div class="col-md-6 padding_right_0">
-<!--                  delle 결과 값-->
-                  <div><img src="{{result_image}}" class="about_img"></div>
-               </div>
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-md-6 padding_right_0">-->
+<!--&lt;!&ndash;                  delle 결과 값&ndash;&gt;-->
+<!--                  <div><img src="{{result_image}}" class="about_img"></div>-->
+<!--               </div>-->
 
-            </div>
-         </div>
-      </div>
+<!--            </div>-->
+<!--         </div>-->
+<!--      </div>-->
       <!-- about section end -->
 
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="about_taital_main">
+                        <!-- result_title -->
+                        <h1 class="about_taital result_title">{{result_title}}</h1>
+                        <!-- result_content -->
+                        <p class="about_text" style="font-size: 20px; padding: 0px 0px 10% 0px;">{{result_content}}</p>
+                        <!-- 동화 다시 만들기 버튼 -->
+                        <a href="{% url 'make' %}" class="su_btn" style="font-size: 20px; padding: 5px 0px 0px 0px;">동화 다시 만들기</a>
+                    </div>
+                </div>
+                <div class="col-md-6 padding_right_0">
+                    <!-- result_image -->
+                    <img src="{{result_image}}" class="about_img img-fluid result_image" alt="Result Image" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
       <!-- Javascript files-->
