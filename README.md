@@ -91,13 +91,14 @@
 <br>
 
 ### 1-3. 동화 주인공의 정보 입력
-
+청자가 원하는 동화 주인공의 이름, 성별, 성격을 입력할 수 있습니다.
 |입력 전 화면|입력 후 화면|
 |------|---|
 |![taleteller_주인공](https://github.com/dusruddl2/Project_Web_fairytale/assets/81481259/e46d796c-e5e2-4536-b6ca-35a903e62af1)|![taleteller_주인공2](https://github.com/dusruddl2/Project_Web_fairytale/assets/81481259/2ebd33e7-5a31-41aa-ad17-a0e533f22236)|
 <br>
 
 ### 로딩 아이콘 제작
+2단계 결과가 도출 시 시간이 소요되어 로딩 아이콘을 제작
 ![loading](https://github.com/dusruddl2/Project_Web_fairytale/assets/81481259/1f5259cf-14c2-45a7-9de9-e43dc54bd491)
 
 
