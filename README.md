@@ -50,7 +50,7 @@
    - [1. 육아 비용 절감에 기여해 가계 부담을 덜어냄](#1-육아-비용-절감에-기여해-가계-부담을-덜어냄)
    - [2. 아동 교육 분야에 활용되어 상호작용적 학습 지원](#2-아동-교육-분야에-활용되어-상호작용적-학습-지원)
    - [3. 동화 작가들에게 영감과 출발점 제공](#3-동화-작가들에게-영감과-출발점-제공)
-
+- [👶🏻 프로젝트 칸반](#-프로젝트-칸반)
 
 <br>
 <br>
@@ -159,5 +159,8 @@ Google gTTS를 활용해 text 형태의 동화를 음성으로 변환하여 아�
 <br>
 <br>
 
-[프로젝트 칸반](https://www.notion.so/dusruddl2/TaleTeller-6461240ab29446d5923a12148154c559)
+
+# 👶🏻 프로젝트 칸반
+<a href="https://www.notion.so/dusruddl2/TaleTeller-6461240ab29446d5923a12148154c559"><img src="https://img.shields.io/badge/Taleteller-000000?style=flat-square&logo=Notion&logoColor=white"/></a>
+
 
